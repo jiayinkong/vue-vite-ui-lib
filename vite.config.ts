@@ -28,5 +28,12 @@ export default defineConfig({
             formats: ['es', 'iife', 'umd']
         },
         cssCodeSplit: true
+    },
+    test: {
+        globals: true,
+        environment: 'happy-dom',
+        transformMode: {
+            web: [/.[tj]sx$/]
+        }
     }
 })

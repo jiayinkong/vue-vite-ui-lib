@@ -1,7 +1,7 @@
 import { App } from 'vue';
-import MyButton from './button';
+import MyButton from './Button';
 import SFCButton from './button/SFCButton.vue';
-import TSXButton from './button/TSXButton';
+import TSXButton from './Button/TSXButton';
 
 // 单独导出
 export {
