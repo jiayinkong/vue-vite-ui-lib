@@ -14,6 +14,10 @@ createApp({
             <MyButton color="indigo">靛蓝色按钮</MyButton>
             <MyButton color="purple">紫色按钮</MyButton>
         </div>
+
+        <div>
+            <MyButton color="blue" round plain icon="search" ></MyButton>
+        </div>
     `
 })
 .use(VueViteUI)

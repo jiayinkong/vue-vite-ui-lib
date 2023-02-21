@@ -4,11 +4,21 @@
         "declarationDir": "./dist/types",
         "jsx": "preserve",
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "ES5",
+            "ES6",
+            "ES2015",
+            "ES7",
+            "ES2016",
+            "ES2017",
+            "DOM"
+        ]
     },
     "include": [
         "./**/*.*",
-        "./shim-vue.d.ts"
+        "./shim-vue.d.ts",
+        "./docs/.vitepress/**/*"
     ],
     "exclude": ["node_modules"]
 }

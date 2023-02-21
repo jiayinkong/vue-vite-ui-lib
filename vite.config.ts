@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import WindiCSS from 'vite-plugin-windicss';
+import Unocss from './config/unocss';
 
 const rollupOptions = {
     external: ['vue', 'vue-router'],
@@ -13,7 +13,11 @@ const rollupOptions = {
 }
 
 export default defineConfig({
-    plugins: [vue(), vueJsx(), WindiCSS()],
+    plugins: [
+        vue(), 
+        vueJsx(),
+        Unocss()
+    ],
     build: {
         rollupOptions,
         minify: false,
@@ -23,6 +27,6 @@ export default defineConfig({
             fileName: 'vue-vite-ui',
             formats: ['es', 'iife', 'umd']
         },
-        // cssCodeSplit: true
+        cssCodeSplit: true
     }
 })
