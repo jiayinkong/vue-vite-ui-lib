@@ -6,10 +6,10 @@ import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue';
 import VueViteUI from '../../../src/entry';
 
 export default {
-    ...Theme,
-    enhanceApp({ app }) {
-        app.use(VueViteUI);
-        app.component('Demo', Demo);
-        app.component('DemoBlock', DemoBlock);
-    }
-}
+  ...Theme,
+  enhanceApp({ app }) {
+    app.use(VueViteUI);
+    app.component('Demo', Demo);
+    app.component('DemoBlock', DemoBlock);
+  },
+};
