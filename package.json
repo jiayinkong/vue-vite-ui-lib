@@ -13,13 +13,15 @@
       "eslint --fix",
       "git add"
     ],
-    "docs/**/*.{md,json,html,yml,css,ts}" : [
+    "docs/**/*.{md,json,html,yml,css,ts}": [
       "prettier --write"
     ]
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm build:comp",
+    "build:comp": "esno ./script/build.ts",
+    "build:all": "vite build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -49,6 +51,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.9.0",
+    "esno": "^0.16.3",
+    "fs-extra": "^11.1.0",
     "happy-dom": "6.0.4",
     "husky": "7.0.1",
     "lint-staged": "^13.1.2",
